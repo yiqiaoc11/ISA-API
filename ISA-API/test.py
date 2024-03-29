@@ -1,5 +1,5 @@
 from abstract_info_struct import *
-
+# a classical Skyline problem solved by Segment Trees
 def getSkyline(buildings):
     events = []
     for b, e, _ in buildings:
