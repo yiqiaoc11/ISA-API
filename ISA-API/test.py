@@ -1,4 +1,4 @@
-from abstract_info_struct import *
+from ais import *
 # a classical Skyline problem solved by Segment Trees
 def getSkyline(buildings):
     events = []
