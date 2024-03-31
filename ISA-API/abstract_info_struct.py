@@ -22,7 +22,25 @@ class SegmentTree(object):
             return 0
         mid = lo + (hi-lo)//2
         return max(self.RMQSegmentTree(idx*2, lower, upper, lo, mid), self.RMQSegmentTree(idx*2+1, lower, upper, mid+1, hi))
+# Range and Dynamic Sum Query 
+class Fenwick:
+    def __init__(self, n):
+        self.ft = [0 for _ in range(n+1)]
 
+    def update(self, val, idx):
+        idx += 1
+        while idx < len(self.ft):
+            self.ft[idx] += val
+            idx += idx & -idx
+
+    def sum(self, idx):
+        res = 0
+        while idx > 0:
+            res += self.ft[idx]
+            idx -= idx & -idx
+        return res
+
+# Prefix Search
 class TrieNode:
     def __init__(self):
         self.next = {}
