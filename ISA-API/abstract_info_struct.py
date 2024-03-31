@@ -22,3 +22,7 @@ class SegmentTree(object):
             return 0
         mid = lo + (hi-lo)//2
         return max(self.RMQSegmentTree(idx*2, lower, upper, lo, mid), self.RMQSegmentTree(idx*2+1, lower, upper, mid+1, hi))
+
+class TrieNode:
+    def __init__(self, data):
+        self.next = {}
