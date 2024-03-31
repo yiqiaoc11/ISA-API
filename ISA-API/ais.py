@@ -1,3 +1,7 @@
+"""
+This file contains definitions of multiple Abstract Information Stuctures.
+"""
+
 # Range Maximum Query
 class SegmentTree(object):
     def __init__(self, length):
