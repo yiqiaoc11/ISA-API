@@ -18,3 +18,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 This file contains definitions of APIs of sequence matching.
 """
+def KMP():
