@@ -18,4 +18,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 This file contains definitions of APIs of sequence matching.
 """
-def KMP():
+def KMP(p):
+    lsp = [0]
+    j = 0
+    for i in range(1, len(p)):
+        while j and p[i] != p[j]:
+            j = lsp[j-1]
+        if p[i] == p[j]:
+            j += 1
+        lsp.append(j)
+    return lsp
